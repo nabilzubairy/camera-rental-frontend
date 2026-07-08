@@ -40,7 +40,7 @@ export default function BookingList() {
 
   useEffect(() => {
     if (user) fetchBookings();
-  }, [user]);
+  }, [user , fetchBookings]);
 
   const downloadInvoice = async (id) => {
     try {

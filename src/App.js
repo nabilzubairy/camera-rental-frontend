@@ -6,7 +6,7 @@ import Login from './Pages/Login';
 import Signup from './Pages/Signup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './component/Layout';
-import { AuthProvider } from './context/AuthContext';
+// import { AuthProvider } from './context/AuthContext';
 import Cart from './component/Cart';
 import AddCamera from './component/AddCamera';
 import Cameras from './component/Cameras';
