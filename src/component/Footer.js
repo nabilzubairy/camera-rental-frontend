@@ -36,7 +36,7 @@ const Footer = () => {
             <p className="text-secondary"><FaEnvelope /> support@camerarental.com</p>
 
             <div>
-              <a href="httpshttps://www.facebook.com/" className="me-2 text-secondary fs-5"><FaFacebook /></a>
+              <a href="https://www.facebook.com/" className="me-2 text-secondary fs-5"><FaFacebook /></a>
               <a href="https://www.twitter.com/" className="me-2 text-secondary fs-5"><FaTwitter /></a>
               <a href="https://www.instagram.com/" className="text-secondary fs-5"><FaInstagram /></a>
             </div>
