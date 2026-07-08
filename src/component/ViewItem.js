@@ -3,14 +3,13 @@ import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { CartContext } from "../context/CartContext";
-import { AuthContext } from "../context/AuthContext";
 
 export default function ViewItem() {
   const { id } = useParams();   // Get camera ID from URL
   const [camera, setCamera] = useState(null);
 
   const { addToCart } = useContext(CartContext);
-  const { user } = useContext(AuthContext);
+  
 
   useEffect(() => {
     const fetchCamera = async () => {
