@@ -26,7 +26,7 @@ export function CartProvider({ children }) {
         if (isLoggedIn && user) {
             fetchCart();
         }
-    }, [isLoggedIn, user]);
+    }, [isLoggedIn, user, fetchCart]);
 
     // ⬇ Add item to cart
     const addToCart = async (camera) => {

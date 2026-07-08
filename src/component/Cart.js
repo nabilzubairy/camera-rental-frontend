@@ -38,7 +38,7 @@ export default function Cart() {
       localStorage.removeItem("cart");
       fetchCart();
     }
-  }, [user]);
+  }, [user , fetchCart]);
 
   const removeItem = async (id) => {
     await removeFromCart(id);
