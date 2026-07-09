@@ -11,7 +11,7 @@ export default function BookingList() {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get(`http://localhost:8080/booking/${user.id}`, {
+      const res = await axios.get(`https://camera-rental-backend-j62w.onrender.com/booking/${user.id}`, {
         withCredentials: true,
       });
 
@@ -22,7 +22,7 @@ export default function BookingList() {
         bookingsData.map(async (b) => {
           const cameraResponses = await Promise.all(
             b.cartItems.map(async (cameraId) => {
-              const cRes = await axios.get(`http://localhost:8080/camera/${cameraId}`);
+              const cRes = await axios.get(`https://camera-rental-backend-j62w.onrender.com/camera/${cameraId}`);
               return cRes.data; // camera object
             })
           );
@@ -44,7 +44,7 @@ export default function BookingList() {
 
   const downloadInvoice = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:8080/booking/invoice/${id}`, {
+      const res = await axios.get(`https://camera-rental-backend-j62w.onrender.com/booking/invoice/${id}`, {
         responseType: "blob",  // Important for PDF
         withCredentials: true,
       });

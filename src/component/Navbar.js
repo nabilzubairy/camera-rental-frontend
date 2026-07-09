@@ -11,7 +11,7 @@ function Navbar() {
 
 
     const logoutHandler = async () => {
-        await axios.post("http://localhost:8080/user/logout", {}, { withCredentials: true });
+        await axios.post("https://camera-rental-backend-j62w.onrender.com/user/logout", {}, { withCredentials: true });
         setIsLoggedIn(false);
         setUser(null);
         setCart([]);

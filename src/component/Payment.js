@@ -53,13 +53,13 @@ export default function Payment() {
         paymentMode
       };
 
-      await axios.post("http://localhost:8080/booking", bookingData, {
+      await axios.post("https://camera-rental-backend-j62w.onrender.com/booking", bookingData, {
         withCredentials: true,
         headers: { "Content-Type": "application/json" }
       });
 
       setCart([]);
-      await axios.delete(`http://localhost:8080/cart/clear/${user.id}`);
+      await axios.delete(`https://camera-rental-backend-j62w.onrender.com/cart/clear/${user.id}`);
       navigate("/confirm");
     } catch (err) {
       console.error("Booking save error:", err);
@@ -70,7 +70,7 @@ export default function Payment() {
 
   const checkAvailability = async (start, end) => {
     try {
-      await axios.get("http://localhost:8080/booking/check-availability", {
+      await axios.get("https://camera-rental-backend-j62w.onrender.com/booking/check-availability", {
         params: {
           cameraIds: cart.map(i => i.cameraId),
           fromDate: start,

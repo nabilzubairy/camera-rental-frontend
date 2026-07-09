@@ -12,7 +12,7 @@ export default function Cameras() {
   useEffect(() => {
     const fetchCameras = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/camera/all");
+        const response = await axios.get("https://camera-rental-backend-j62w.onrender.com/camera/all");
         setCameras(response.data);
       } catch (error) {
         console.error("Error fetching cameras", error);

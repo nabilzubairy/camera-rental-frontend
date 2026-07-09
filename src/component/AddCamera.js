@@ -25,7 +25,7 @@ export default function AddCamera() {
     formData.append("image", image);
 
     try {
-      await axios.post("http://localhost:8080/camera/add", formData, {
+      await axios.post("https://camera-rental-backend-j62w.onrender.com/camera/add", formData, {
         headers: { "Content-Type": "multipart/form-data" }
       });
 

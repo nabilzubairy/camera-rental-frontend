@@ -13,7 +13,7 @@ export default function Cart() {
 
   const fetchCart = async () => {
     try {
-      const res = await axios.get(`http://localhost:8080/cart/${user.id}`, {
+      const res = await axios.get(`https://camera-rental-backend-j62w.onrender.com/cart/${user.id}`, {
         withCredentials: true,
       });
 
@@ -21,7 +21,7 @@ export default function Cart() {
 
       const itemsWithDetails = await Promise.all(
         cartData.map(async (item) => {
-          const camRes = await axios.get(`http://localhost:8080/camera/${item.cameraId}`);
+          const camRes = await axios.get(`https://camera-rental-backend-j62w.onrender.com/camera/${item.cameraId}`);
           return { ...item, camera: camRes.data }; 
         })
       );

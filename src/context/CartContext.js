@@ -13,7 +13,7 @@ export function CartProvider({ children }) {
     const fetchCart = async () => {
         if (!user) return;
         try {
-            const res = await axios.get(`http://localhost:8080/cart/${user.id}`, {
+            const res = await axios.get(`https://camera-rental-backend-j62w.onrender.com/cart/${user.id}`, {
                 withCredentials: true,
             });
             setCart(res.data);
@@ -40,7 +40,7 @@ export function CartProvider({ children }) {
 
         try {
             const response = await axios.post(
-                `http://localhost:8080/cart/add?userId=${user.id}&cameraId=${camera.id}`,
+                `https://camera-rental-backend-j62w.onrender.com/cart/add?userId=${user.id}&cameraId=${camera.id}`,
                 {},
                 { withCredentials: true }
             );
@@ -60,7 +60,7 @@ export function CartProvider({ children }) {
     // ⬇ Remove item from cart
     const removeFromCart = async (cartItemId) => {
         try {
-            await axios.delete(`http://localhost:8080/cart/${cartItemId}`, {
+            await axios.delete(`https://camera-rental-backend-j62w.onrender.com/cart/${cartItemId}`, {
                 withCredentials: true,
             });
             alert("Item Removed Successfully From Cart!");

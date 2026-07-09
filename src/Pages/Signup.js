@@ -18,7 +18,7 @@ export default function Signup() {
     }
 
 
-    await axios.post("http://localhost:8080/user/register", user, { headers: { "Content-Type": "application/json" } });
+    await axios.post("https://camera-rental-backend-j62w.onrender.com/user/register", user, { headers: { "Content-Type": "application/json" } });
     alert("Signup Successful");
     navigate("/login");
   };

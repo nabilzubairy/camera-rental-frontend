@@ -13,7 +13,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/user/login", credentials, {
+      const response = await axios.post("https://camera-rental-backend-j62w.onrender.com/user/login", credentials, {
         withCredentials: true,
         headers: { "Content-Type": "application/json" }
       });

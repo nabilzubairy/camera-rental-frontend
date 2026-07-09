@@ -14,7 +14,7 @@ export default function ViewItem() {
   useEffect(() => {
     const fetchCamera = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/camera/${id}`);
+        const res = await axios.get(`https://camera-rental-backend-j62w.onrender.com/camera/${id}`);
         setCamera(res.data);
       } catch (err) {
         console.error("Error fetching camera", err);

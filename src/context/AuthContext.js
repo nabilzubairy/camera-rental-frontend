@@ -18,7 +18,7 @@ export function AuthProvider({ children }) {
     // 2) Validate session from backend
     const checkSession = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/user/check-session", {
+        const response = await axios.get("https://camera-rental-backend-j62w.onrender.com/user/check-session", {
           withCredentials: true,
         });
 
